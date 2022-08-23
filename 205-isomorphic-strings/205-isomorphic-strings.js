@@ -15,9 +15,9 @@ var isIsomorphic = function(s, t) {
             for(let j = 0; j < allTheValues.length; j++) {
                 let currentValue = allTheValues[j];
                 if(currentValue === currentTLetter) {
-                    console.log("value", currentValue);
-                    console.log("currentT", currentTLetter);
-                    console.log("are we in the value check??")
+                    // console.log("value", currentValue);
+                    // console.log("currentT", currentTLetter);
+                    // console.log("are we in the value check??")
                     return false;
                 }
             }          
@@ -27,7 +27,7 @@ var isIsomorphic = function(s, t) {
             letterPairing[currentSLetter] = currentTLetter;
             // object dot notion is for calling that specific key -- therefore need bracket notation
             
-            console.log("letterPairing is:", letterPairing)
+            // console.log("letterPairing is:", letterPairing)
             
         } else {
              if (currentTLetter !== letterPairing[currentSLetter]) {
