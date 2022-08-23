@@ -15,18 +15,11 @@ var isIsomorphic = function(s, t) {
             for(let j = 0; j < allTheValues.length; j++) {
                 let currentValue = allTheValues[j];
                 if(currentValue === currentTLetter) {
-                    // console.log("value", currentValue);
-                    // console.log("currentT", currentTLetter);
-                    // console.log("are we in the value check??")
                     return false;
                 }
             }          
-            //console.log("allTheValue: ", allTheValues);
             
-            
-            letterPairing[currentSLetter] = currentTLetter;
-            // object dot notion is for calling that specific key -- therefore need bracket notation
-            
+            letterPairing[currentSLetter] = currentTLetter; // object dot notion is for calling that specific key -- therefore need bracket notation
             // console.log("letterPairing is:", letterPairing)
             
         } else {
