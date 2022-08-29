@@ -2,6 +2,9 @@
  * @param {number[]} nums
  * @return {number}
  */
+
+// ---- Time complexity O2N => ON -----------
+
 var pivotIndex = function(nums) {
     let pointer; 
     let leftSum = 0;
