@@ -10,22 +10,14 @@ var twoSum = function(nums, target) {
         let currentNum = nums[i]
         let targetNum = target - currentNum;
         if(hashmap[targetNum] || hashmap[targetNum] === 0) {
-            
             resultArray.push(i);
             resultArray.push(hashmap[targetNum])
             break;
         } else {
             hashmap[currentNum] = i;
-            
         }
         
     }
-    
-    
-    
     return resultArray;
 };
 
-/*
-    
-*/
