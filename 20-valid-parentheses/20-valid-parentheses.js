@@ -20,6 +20,8 @@ var isValid = function(s) {
     // else {
     // return true
     // }
+    
+    // Time complexity: ON 1
     let stack = [];
     for (let i = 0; i < s.length; i++) {
         let currentParens = s[i];
