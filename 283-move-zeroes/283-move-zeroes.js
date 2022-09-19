@@ -7,15 +7,15 @@
     // 2. push as many times as count
 
 var moveZeroes = function(nums) {
-    let length = nums.length;
+    // let length = nums.length;
     let count = 0;
     
-    for (let i = 0; i < length; i++) {
+    for (let i = 0; i < nums.length; i++) {
         if(nums[i] === 0) {
             nums.splice(i, 1); 
             // nums.push(0)
             i--;
-            length--;
+            // length--;
             count++;
         console.log(nums);
         }
