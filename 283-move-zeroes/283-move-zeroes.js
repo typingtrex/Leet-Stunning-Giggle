@@ -17,7 +17,7 @@ var moveZeroes = function(nums) {
             i--;
             // length--;
             count++;
-        console.log(nums);
+        // console.log(nums);
         }
     }
     
