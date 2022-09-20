@@ -9,16 +9,16 @@ var fib = function(n) {
     if(n === 0) {
         return 0
     }
-    console.log("n here", n)
+    // console.log("n here", n)
     for(let i = 0; i < n -1; i++) {
     
         let temp = one + two;
     
         one = two;
         two = temp;
-        console.log("n",n);
-        console.log("one", one);
-        console.log("two", two)
+        // console.log("n",n);
+        // console.log("one", one);
+        // console.log("two", two)
     }
 
     return two;
