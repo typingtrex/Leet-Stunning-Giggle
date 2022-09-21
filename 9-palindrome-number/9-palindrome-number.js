@@ -13,9 +13,9 @@ var isPalindrome = function(x) {
     
     while(p1 < p2) {
        
-        if(xStr < 10 && xStr > -1  ) {
-            return true;
-        }
+//         if(xStr < 10 && xStr > -1  ) {
+//             return true;
+//         }
         
         if (xStr[p1] !== xStr[p2]) {
             return false;
