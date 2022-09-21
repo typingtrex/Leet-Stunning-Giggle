@@ -27,6 +27,7 @@ var isPalindrome = function(x) {
     */
     
     // without converting to string need to divide by 10 and use the remainder as the ones, tens, hundreds, etc. into an array
+    let original = x   
     if(x < 0) return false;
     
     let arrOfDigits = [];
@@ -35,17 +36,25 @@ var isPalindrome = function(x) {
         let endDigit = x % 10;
         // console.log(endDigit)
         x = Math.floor(x/10) 
-        arrOfDigits.unshift(endDigit)
+        arrOfDigits.push(endDigit)
     }
     
-    while (arrOfDigits.length) {
-        if(arrOfDigits.length === 1) return true
+    let reversed = arrOfDigits.join("");
+    console.log(reversed);
+    
+    if(reversed == original) return true
+    
+    else return false;
+    
+//     while (arrOfDigits.length) {
+//         if(arrOfDigits.length === 1) return true
         
-        let p1 = arrOfDigits.shift();
-        let p2 = arrOfDigits.pop();
-        console.log(p1, p2)
-        if (p1 !== p2) return false;
-    }
+//         let p1 = arrOfDigits.shift();
+//         let p2 = arrOfDigits.pop();
+//         console.log(p1, p2)
+//         if (p1 !== p2) return false;
+//     }
     
-    return true;
+ 
 };
+// solved both ways under 30 min :)
