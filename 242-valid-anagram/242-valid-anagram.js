@@ -29,11 +29,11 @@ var isAnagram = function(s, t) {
         } 
         
         
-        
+
         if (hashmap[currLetter]) {
-            console.log(hashmap[currLetter])
+            // console.log(hashmap[currLetter])
             hashmap[currLetter] = hashmap[currLetter] -1;
-            console.log(currLetter, hashmap[currLetter])
+            // console.log(currLetter, hashmap[currLetter])
         }
     }
     return true
