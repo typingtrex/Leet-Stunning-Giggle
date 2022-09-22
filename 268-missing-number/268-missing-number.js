@@ -5,7 +5,6 @@
 var missingNumber = function(array) {
     let sum = 0;
     let largest = array.length;	//5
-
 	
     for (let i = 0; i <= largest; i++) {
 	    sum += i // 15
@@ -16,5 +15,6 @@ var missingNumber = function(array) {
     }
 
     return sum; //3
-
+    
+    // ----- cycle sort method ---- TRY IT!
 };
