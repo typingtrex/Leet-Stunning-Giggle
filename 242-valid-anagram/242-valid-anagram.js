@@ -32,7 +32,8 @@ var isAnagram = function(s, t) {
 
         if (hashmap[currLetter]) {
             // console.log(hashmap[currLetter])
-            hashmap[currLetter] = hashmap[currLetter] -1;
+            // hashmap[currLetter] = hashmap[currLetter] -1; below is the same
+            hashmap[currLetter]--
             // console.log(currLetter, hashmap[currLetter])
         }
     }
