@@ -9,7 +9,7 @@ var missingNumber = function(array) {
     // for (let i = 0; i <= largest; i++) {
     // sum += i // 15
     // };
-    console.log(largest * ((largest+ 1)/2), sum)
+    // console.log(largest * ((largest+ 1)/2), sum)
     for (let i = 0; i < array.length; i++) {
 	    sum -= array[i]; 
     }
