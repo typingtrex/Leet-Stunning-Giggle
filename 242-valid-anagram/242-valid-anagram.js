@@ -15,8 +15,9 @@ var isAnagram = function(s, t) {
         if(!hashmap[s[i]]) {
             hashmap[s[i]] = 1;
         } else {
-            let count = hashmap[s[i]] +1;
-            hashmap[s[i]] = count
+            // let count = hashmap[s[i]] +1;
+            // hashmap[s[i]] = count
+            hashmap[s[i]]++
          
         }
     }
