@@ -18,17 +18,26 @@ var firstUniqChar = function(s) {
     // if(countOne) {
     // }
     
-     let firstInstance = Object.keys(hashmap).find(key => hashmap[key] === 1)
-    console.log("letter: ", firstInstance);
+    // ------ a bit too complicated -------
+    //  let firstInstance = Object.keys(hashmap).find(key => hashmap[key] === 1)
+    // console.log("letter: ", firstInstance);
     
-    if (firstInstance) {
-        for(let i = 0; i < s.length; i++) {
-            if (firstInstance === s[i]) {
-                return i
-            }
+    // if (firstInstance) {
+    //     for(let i = 0; i < s.length; i++) {
+    //         if (firstInstance === s[i]) {
+    //             return i
+    //         }
+    //     }
+    // } else {
+    //     return -1
+    // }
+    // ----------------------------------
+    for ( let i = 0; i < s.length; i++) {
+        if(hashmap[s[i]] === 1) {
+            return i
         }
-    } else {
-        return -1
     }
+    
+    return -1
     
 };
