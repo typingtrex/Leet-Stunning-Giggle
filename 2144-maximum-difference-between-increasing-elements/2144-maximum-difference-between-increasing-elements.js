@@ -2,6 +2,22 @@
  * @param {number[]} nums
  * @return {number}
  */
+
+// DP faster approach
+var maximumDifference = function(nums) {
+    let min = Infinity;
+    let diff = -1;
+
+    for (let i = 0; i < nums.length; i++) {
+        min = Math.min(min, nums[i]);
+        diff = Math.max(diff, nums[i] - min)
+    }
+    return diff === 0 ? -1 : diff
+}
+
+
+ /*
+ // ----- creating functions ----------------------
 var maximumDifference = function(nums) {
     const maxNumsArray = createArrayOfMaxNumRightMost(nums)
     const minNumsArray = createArrayOfMinNumLeftMost(nums)
@@ -41,3 +57,4 @@ const createArrayOfMinNumLeftMost = (nums) => {
     console.log(minArray)
     return minArray;
 }
+*/
