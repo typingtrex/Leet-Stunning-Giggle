@@ -11,25 +11,34 @@ var containsDuplicate = function(nums) {
         // after iterating, return false
         // ---- TIME Complexity ----- O (nLogN)
         // ------ space complexity  ---- O(1) 
-        nums.sort()
-        for (let i = 0; i < nums.length - 1; i++) {
-            const num1 = nums[i];
-            const num2 = nums[i + 1];
-            if (num1 === num2) {
-                return true
-            }
-        }
+        // ----- SOLUTION: ---------------------------------
+        // nums.sort()
+        // for (let i = 0; i < nums.length - 1; i++) {
+        //     const num1 = nums[i];
+        //     const num2 = nums[i + 1];
+        //     if (num1 === num2) {
+        //         return true
+        //     }
+        // }
+        // return false
 
-        return false
     // 2nd method: 
     // iterate and create hashmap
         // if seen in hashmap then return true
         // after iteration is complete return false
         // ----- TIME complexity --- O(N)
         // ------- SPACE complexity --- O(N)
+        const seenNumbers = {};
+        for (let i = 0; i < nums.length; i++) {
+            const currNum = nums[i];
+            if (seenNumbers[currNum]) {
+                return true;
+            } else {
+                seenNumbers[currNum] = 1;
+            }
+        }
 
-
-
+        return false
 }
 
  // ----- previous solution: ---------
