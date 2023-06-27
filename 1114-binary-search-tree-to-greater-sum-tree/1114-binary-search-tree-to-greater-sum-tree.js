@@ -15,8 +15,6 @@ var bstToGst = function(root) {
         return root
     }
 
-    
-
     // base case for recursion is 
     // if currentNode.right is a leaf node
 
@@ -35,7 +33,7 @@ var bstToGst = function(root) {
             2. I want to keep going to the right
         
     */
-    let currNode = root; 
+    // let currNode = root; 
    
     const transformToGST = (currNode, sum) => {
         // base case
@@ -55,6 +53,6 @@ var bstToGst = function(root) {
         return sum
     }
 
-    transformToGST(currNode, 0)
+    transformToGST(root, 0)
     return root
 };
