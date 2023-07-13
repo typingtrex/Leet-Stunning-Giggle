@@ -1,7 +1,6 @@
 class Solution {
     public boolean isPalindrome(int x) {
-        int one = 0;
-        int two = 0;
+    
 
         if (x < 0) {
             return false;
@@ -16,8 +15,8 @@ class Solution {
             x = x/10;
         }
         for (int i = 0; i < ary.size()/2; i++) {
-            one = ary.get(i);
-            two = ary.get(ary.size() - 1 - i);
+            int one = ary.get(i);
+            int two = ary.get(ary.size() - 1 - i);
 
             if (one != two) {
                 return false;
