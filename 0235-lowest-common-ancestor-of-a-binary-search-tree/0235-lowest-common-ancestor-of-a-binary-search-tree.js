@@ -13,6 +13,7 @@
  * @return {TreeNode}
  */
 
+/*
 // iterative solution: 
 var lowestCommonAncestor = function(root, p, q) {
   let current = root;
@@ -25,6 +26,8 @@ var lowestCommonAncestor = function(root, p, q) {
       return current;
     }
 
+ //  
+
     // if ((p.val < current.val && q.val > current.val) || (p.val > current.val && q.val < current.val)) {
     //   return current;
     // }
@@ -36,30 +39,31 @@ var lowestCommonAncestor = function(root, p, q) {
   }
 }
 
-/*
+*/
+
+
 var lowestCommonAncestor = function(root, p, q) {
   // console.log(root.val)
 
-    const isLeft = (node) => {
-      if (node) {
-        if (node.val < root.val) {
-            return true;
-        } 
-        return false;
+  // compareTo returns negative num if less than, 0 if equal, positive if greater than 
+    const compareToRoot = (node) => {
+      if (node == null) {
+        return 0
       }
+      return node.val - root.val
     }
-
-  if (isLeft(p) && isLeft(q)) {
+  console.log("p: ", p)
+  console.log("q: ", q)
+  if (compareToRoot(p) < 0 && compareToRoot(q) < 0) {
     console.log("left", root.val, root.left.val)
-    return lowestCommonAncestor(root.left)
+    return lowestCommonAncestor(root.left, p, q)
   } 
 
-  if (isLeft(p) === false && isLeft(q) === false) {
+  if (compareToRoot(p) > 0 && compareToRoot(q) > 0) {
     console.log("right", root.val, root.right.val)
-    return lowestCommonAncestor(root.right)
+    return lowestCommonAncestor(root.right, p, q)
   }
   // base case of node1 and node2 in different directions
   return root
 
 };
-*/
