@@ -23,21 +23,22 @@ var kClosest = function(points, k) {
        hashmap[hypotenuse] = [point];
     }
   }
-    // console.log("hashmap: ", hashmap)
+    console.log("hashmap: ", hashmap)
   const sortedDistances = Object.keys(hashmap).sort((a, b) => a - b) // returns an array of sorted keys 
   const smallestDistances = [];
 
   let index = 0; // 2
-  while (k > 0){
+  while (k > 0 && smallestDistances.length <= points.length){
     const distance = sortedDistances[index]; // 
-    // console.log("distance: ", distance)
+    console.log("distance: ", distance)
     const arrayOfPoints = hashmap[distance]; //  [[0,2], [2,0]]
-    // console.log("points: ", arrayOfPoints) 
+    console.log("points: ", arrayOfPoints) 
     for (let i = 0; i < arrayOfPoints.length; i++){
       smallestDistances.push(arrayOfPoints[i])
       k--; // 1
     }
     index++
+    console.log(k, index)
   }
 
   return smallestDistances // [[0,1], [0,2], [2,0]]
