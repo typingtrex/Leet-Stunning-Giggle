@@ -9,10 +9,13 @@
  * @param {ListNode} head
  * @return {ListNode}
  */
+
+ // ------ my recent solution ----------
+
 var reverseList = function(head) {
     let previousNode = null;
     let currentNode = head; //1
-    let nextNode;
+
     while (currentNode) {
         nextNode = currentNode.next //2
         currentNode.next = previousNode; // null <- 1
@@ -21,3 +24,11 @@ var reverseList = function(head) {
     }
     return previousNode
 };
+
+
+// ------ neetcode solutions -------
+// ----- iteratively with 2 pointers -------
+// same as mine above 
+// Time Complexity O(N)
+// Space Complexity O(1)
+
